@@ -4,6 +4,7 @@ import './styles/main.css';
 import './styles/utilities.css';
 import './styles/form.css';
 import "./styles/variables.css";
+import './homepage.css';
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
