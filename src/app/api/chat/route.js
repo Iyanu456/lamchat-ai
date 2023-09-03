@@ -4,7 +4,7 @@ import { experimental_buildLlama2Prompt } from 'ai/prompts';
  
 // Create a Replicate API client (that's edge friendly!)
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_KEY || '',
+  auth: process.env.REPLICATE_API_KEY || 'r8_MikRAjUgm4dBlVjYsIf7zx8hR6Z3ZUs3tanpv',
 });
  
 // IMPORTANT! Set the runtime to edge
