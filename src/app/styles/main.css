@@ -1,0 +1,236 @@
+
+/*html {
+    height: 100%;
+}*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    outline-color: var(--primary-color);
+    height: 100%;
+    text-decoration: none;
+
+}
+
+
+.main-container {
+    font-family: 'Nunito Sans';
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 14em auto;
+    width: 100%;
+    height: 100%;
+}
+
+aside {
+    /*background-color: rgb(231, 231, 231);*/
+    min-height: 100%;
+}
+
+aside {
+    background-color: rgb(254, 254, 254);
+    padding: 2em 1em;
+    border-right: 1px solid rgb(220, 220, 220);
+}
+aside > button {
+    height: fit-content;
+    padding: 0.85em 1.4em;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    background-color: rgb(254, 254, 254);
+    border: 1px solid rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+aside > button:hover {
+    box-shadow: rgba(23, 23, 23, 0.09)4px 3px 12px;
+    outline: 1px solid var(--primary-color);
+}
+main {
+    margin-left: 2.4em;
+    margin-right: 2.4em;
+    padding-top: 1em;
+    width: auto;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    padding: 0.8em 1.2em;
+    height: 3em;
+    background-color: rgb(254, 254, 254);
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.chat-section {
+    width: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+  }
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.banner {
+    height: fit-content;
+    display: grid;
+    gap: 1em;
+}
+
+.example-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    place-items: center;
+}
+
+.example-group > div {
+    display: grid;
+    place-items: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.8em 1.2em;
+    height: 100%;
+    background-color: rgb(253, 253, 253);
+    color: rgb(70, 70, 70);
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgb(220, 220, 220);
+    cursor: pointer;
+    /*box-shadow: rgba(23, 23, 23, 0.09)4px 3px 12px;*/
+}
+
+.example-group > div:hover {
+    box-shadow: rgba(23, 23, 23, 0.09)4px 3px 12px;
+    border: 1px solid var(--primary-color);
+}
+
+.prompt-field {
+    position: fixed;
+    height: fit-content;
+    bottom: 0;
+    padding: 1.4em 2.4em;
+    width: auto;
+    right: 0;
+    left: 14em;
+    display: flex;
+    background-color:  rgb(253, 253, 253);
+    border-top: 1px solid rgb(220, 220, 220);
+    justify-content: center;
+}
+
+.prompt-field > input {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1.2em 2em;
+    background-color: rgb(253, 253, 253);
+    box-shadow: rgba(49, 49, 49, 0.1)4px 3px 12px;
+    border: 1.2px solid rgb(214, 214, 214);
+    word-wrap: break-word;
+    outline: 6em;
+}
+.prompt-field > button {
+    display: grid;
+    place-items: center;
+    background-color: rgb(253, 253, 253);
+    margin: auto;
+    padding: 0.4em;
+    margin-left: -4em;
+    
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.user, .ai {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8% 88%;
+    gap: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: fit-content;
+    
+}
+
+.user, .ai > p {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: fit-content;
+    overflow-wrap: break-word;
+}
+
+
+.user-icon, .ai-icon {
+    display: grid;
+    place-items: center;
+    margin: 0 0 auto 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(201, 111, 0);
+}
+
+.ai-icon {
+    background-color: rgb(107, 0, 107);
+}
+
+@media screen and (max-width: 800px) {
+    .example-group {
+        padding: 1em 1.2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    .example-group > div {
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 700px) {
+    main {
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-bottom: 2.4em;
+    }
+
+    aside {
+        display: none;
+    }
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .prompt-field {
+        padding: 1.4em 1em;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding-bottom: 1em;
+    }
+
+    .prompt-field > input {
+        max-height: 200px;
+    }
+}
