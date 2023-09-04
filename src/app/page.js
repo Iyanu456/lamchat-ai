@@ -8,7 +8,7 @@ export default function Home() {
         fontWeight: "550"
     }
     const firstCard = {
-        backgroundColor: "rgb(248, 178, 1)",
+        backgroundColor: "rgb(278, 268, 5)",
         color: "rgb(27, 44, 155)"
     }
     return (
@@ -36,7 +36,7 @@ export default function Home() {
                         LamChat is powered by state-of-the-art AI technology. It understands your questions and provides relevant, accurate information in real-time. Our ever-evolving chatbot adapts to your needs, ensuring each interaction is meaningful and productive.
                     </div>
                 </section>
-                <section className="why-section">
+                <section className="why-section mb-30">
                     <h2 style={largeHeading}>Why LamChat?</h2>
                     <div>
                         <div className="card" style={firstCard}>
@@ -46,8 +46,20 @@ export default function Home() {
                                 <div className="content">LamChat is here for fun and informative chats. It's really good at making conversations interesting.</div>
                             </div>
                         </div>
-                        <div className="card">ff</div>
-                        <div className="card">f</div>
+                        <div className="card" style={firstCard}>
+                            <h1>Great Conversations</h1>
+                            <div>
+                                <div className="line"></div>
+                                <div className="content">LamChat is here for fun and informative chats. It's really good at making conversations interesting.</div>
+                            </div>
+                        </div>
+                        <div className="card" style={firstCard}>
+                            <h1>Great Conversations</h1>
+                            <div>
+                                <div className="line"></div>
+                                <div className="content">LamChat is here for fun and informative chats. It's really good at making conversations interesting.</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>

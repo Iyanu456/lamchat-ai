@@ -66,7 +66,9 @@ header > nav > ul {
     background-color: rgba(38, 38, 38, 0.4);
 }
 .main-group {
+    height: fit-content;
     padding: 2em;
+    margin-bottom: 2em;
 }
 .intro-group {
     margin-top: 2em;
@@ -127,6 +129,7 @@ header > nav > ul {
     height: fit-content;
     margin-top: 3.5em;
 }
+
 .how-section > h2 {
     color: rgb(27, 44, 155);
 }
@@ -138,7 +141,7 @@ header > nav > ul {
 }
 .card {
     border-radius: 15px;
-    padding: 1em 1.4em;
+    padding: 1.2em 1.4em 1.4em 1.4em;
     width: 100%;
     height: 100%;
     background-color: rgb(248, 178, 1);
@@ -146,7 +149,7 @@ header > nav > ul {
 }
 .card > h1 {
     height: fit-content;
-    font-family: 0.95em;
+    font-family: 0.90em;
     font-weight: 550;
 }
 .card > div {
@@ -158,8 +161,7 @@ header > nav > ul {
     content: "";
     height: auto;
     width: 5px;
-    background-color: yellow;
-    background-color: rgb(255, 140, 0);
+    background-color: rgb(27, 44, 155);
 }
 .card > div > .content {
     height: auto;
@@ -168,7 +170,7 @@ header > nav > ul {
 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 860px) {
     .heading-section > h1 {
         width: 80%;
         font-size: 2.4em;
@@ -199,6 +201,12 @@ header > nav > ul {
     .intro-section > div.content {
         max-width: 100%;
     }
+    .why-section > div {
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2em;
+    }
 
 }
 @media screen and (max-width: 640px) {
@@ -210,5 +218,11 @@ header > nav > ul {
     }
     header > nav > ul {
         display: none;
+    }
+    .why-section > div {
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2em;
     }
 }
