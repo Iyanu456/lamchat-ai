@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6.66666in" height="11.8333in" viewBox="0 0 6666.66 11833.33">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        .str0 {stroke:black;stroke-width:26.67;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.61313}
+        .fil0 {fill:none}
+      ]]>
+    </style>
+    <clipPath id="id0">
+      <path d="M2671.56 5512.72l1323.55 0c31,0 56.35,25.35 56.35,56.35l0 695.19c0,31 -25.35,56.35 -56.35,56.35l-1323.55 0c-31,0 -56.35,-25.35 -56.35,-56.35l0 -695.19c0,-31 25.35,-56.35 56.35,-56.35z"/>
+    </clipPath>
+  </defs>
+  <g>
+    <path class="fil0 str0" d="M2671.56 5512.72l1323.55 0c31,0 56.35,25.35 56.35,56.35l0 695.19c0,31 -25.35,56.35 -56.35,56.35l-1323.55 0c-31,0 -56.35,-25.35 -56.35,-56.35l0 -695.19c0,-31 25.35,-56.35 56.35,-56.35z"/>
+  </g>
+</svg>

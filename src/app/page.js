@@ -1,4 +1,6 @@
 import NavBar from "./NavBar"
+import Image from "next/image"
+import Llama from "./assets/icons/lama-svg-0.svg"
 export default function Home() {
     return (
         <div>
@@ -12,7 +14,11 @@ export default function Home() {
                 </div>
             </section>
             <section className="main-section mt-20">
-                <h2>Introducing LamChat</h2>
+                <div className="heading">
+                    <h2>Introducing LamChat </h2>
+                    <Image src={Llama} alt="llama" />
+                </div>
+                
                 <div>{ "LamChat is your intelligent chat companion, designed to engage, inform, and entertain. Whether you're seeking answers, looking for interesting discussions, or just want to chat, LamChat is here to make your conversations enjoyable and informative."}</div>
             </section>
             <section className="main-section">

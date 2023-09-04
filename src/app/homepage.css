@@ -69,17 +69,30 @@ header > nav > ul {
     height: fit-content;
     padding: 2em 4em;
 }
-.main-section > h2 {
+.main-section > div.heading {
+    display: flex;
+    grid-area: 5em;
+}
+.main-section > div.heading > h2 {
     height: fit-content;
     color: rgb(37, 37, 37);
     font-size: 2.4em;
     font-family: Poppins;
     font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.main-section > div > img {
+    height: 50px;
+    width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .main-section > div {
     line-height: 1.6em;
     max-width: 70%;
 }
+
 .screenshot {
     height: 50%;
     width: 50%;
