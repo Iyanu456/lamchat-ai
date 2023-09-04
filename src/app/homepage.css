@@ -223,7 +223,7 @@ header > nav > ul {
         height: fit-content;
         display: flex;
         flex-wrap: wrap;
-        gap: 1.2em;
+        gap: 2.2em;
     }
     .main-group {
         height: fit-content;

@@ -8,7 +8,7 @@ export default function Home() {
         fontWeight: "550"
     }
     const firstCard = {
-        backgroundColor: "rgb(278, 268, 5)",
+        backgroundColor: "rgb(258, 248, 10)",
         color: "rgb(27, 44, 155)"
     }
     return (
