@@ -50,14 +50,14 @@ export default function Home() {
                             <h1>Great Conversations</h1>
                             <div>
                                 <div className="line"></div>
-                                <div className="content">LamChat is here for fun and informative chats. It's really good at making conversations interesting.</div>
+                                <div className="content">{"LamChat is here for fun and informative chats. It's really good at making conversations interesting."}</div>
                             </div>
                         </div>
                         <div className="card" style={firstCard}>
                             <h1>Great Conversations</h1>
                             <div>
                                 <div className="line"></div>
-                                <div className="content">LamChat is here for fun and informative chats. It's really good at making conversations interesting.</div>
+                                <div className="content">{"LamChat is here for fun and informative chats. It's really good at making conversations interesting."}</div>
                             </div>
                         </div>
                     </div>
