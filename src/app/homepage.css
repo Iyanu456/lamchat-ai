@@ -225,4 +225,8 @@ header > nav > ul {
         flex-wrap: wrap;
         gap: 1.2em;
     }
+    .main-group {
+        height: fit-content;
+        padding: 2em 1.4em;
+        margin-bottom: 2em;
 }
