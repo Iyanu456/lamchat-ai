@@ -38,7 +38,7 @@ header > nav > ul {
     width: 68%;
     text-align: center;
     line-height: 1.2em;
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-family: Poppins;
     font-weight: 600;
 }
@@ -172,8 +172,8 @@ header > nav > ul {
 
 @media screen and (max-width: 860px) {
     .heading-section > h1 {
-        width: 80%;
-        font-size: 2.4em;
+        width: 88%;
+        font-size: 2.7em;
     }
     .heading-section > div > button {
         height: fit-content;
@@ -227,7 +227,7 @@ header > nav > ul {
     }
     .main-group {
         height: fit-content;
-        padding: 2em 1.4em;
+        padding: 2em 0.8em;
         margin-bottom: 2em;
     }
 }
