@@ -1,7 +1,16 @@
 import NavBar from "./NavBar"
-import Image from "next/image"
-import Llama from "./assets/icons/lama-svg-0.svg"
+import IntroSection from "./IntroductionSection"
 export default function Home() {
+    const largeHeading = {
+        height: "fit-content",
+        fontSize: "2.4em",
+        fontfamily: "Poppins",
+        fontWeight: "550"
+    }
+    const firstCard = {
+        backgroundColor: "rgb(248, 178, 1)",
+        color: "rgb(27, 44, 155)"
+    }
     return (
         <div>
             <NavBar />
@@ -13,20 +22,35 @@ export default function Home() {
                     <button>See More</button>
                 </div>
             </section>
-            <section className="main-section mt-20">
-                <div className="heading">
-                    <h2>Introducing LamChat </h2>
-                    <Image src={Llama} alt="llama" />
-                </div>
-                
-                <div>{ "LamChat is your intelligent chat companion, designed to engage, inform, and entertain. Whether you're seeking answers, looking for interesting discussions, or just want to chat, LamChat is here to make your conversations enjoyable and informative."}</div>
-            </section>
-            <section className="main-section">
-                <h2>Why LamChat</h2>
-                <div><b>Great Conversations:</b>{" LamChat is here for fun and informative chats. It's really good at making conversations interesting."}</div>
-                <div className="mt-10"><b>Quick Answers:</b>{" No more waiting! LamChat gives you fast responses, so you don't have to wait long."}</div>
-                <div className="mt-10"><b>Tailored for You:</b>{" LamChat talks to you in a way that you like. It's like having a friend who knows what you like to talk about."}</div>
-            </section>
+            <main className="main-group">
+                <IntroSection />
+                <section className="how-section">
+                    <h2 style={largeHeading}>How Does LamChat Work?</h2>
+                    <div>
+                        LamChat is powered by state-of-the-art AI technology. It understands your questions and provides relevant, accurate information in real-time. Our ever-evolving chatbot adapts to your needs, ensuring each interaction is meaningful and productive.
+                    </div>
+                </section>
+                <section className="samples-section">
+                    <h2 style={largeHeading}>Samples</h2>
+                    <div>
+                        LamChat is powered by state-of-the-art AI technology. It understands your questions and provides relevant, accurate information in real-time. Our ever-evolving chatbot adapts to your needs, ensuring each interaction is meaningful and productive.
+                    </div>
+                </section>
+                <section className="why-section">
+                    <h2 style={largeHeading}>Why LamChat?</h2>
+                    <div>
+                        <div className="card" style={firstCard}>
+                            <h1>Great Conversations</h1>
+                            <div>
+                                <div className="line"></div>
+                                <div className="content">LamChat is here for fun and informative chats. It's really good at making conversations interesting.</div>
+                            </div>
+                        </div>
+                        <div className="card">ff</div>
+                        <div className="card">f</div>
+                    </div>
+                </section>
+            </main>
             
         </div>
     )

@@ -35,7 +35,7 @@ header > nav > ul {
   
 .heading-section > h1 {
     margin: auto;
-    width: 65%;
+    width: 68%;
     text-align: center;
     line-height: 1.2em;
     font-size: 2.5em;
@@ -65,44 +65,113 @@ header > nav > ul {
 .heading-section > div > button:last-child {
     background-color: rgba(38, 38, 38, 0.4);
 }
-.main-section {
-    height: fit-content;
-    padding: 2em 4em;
+.main-group {
+    padding: 2em;
 }
-.main-section > div.heading {
-    display: flex;
-    grid-area: 5em;
-}
-.main-section > div.heading > h2 {
+.intro-group {
+    margin-top: 2em;
     height: fit-content;
-    color: rgb(37, 37, 37);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em;
+}
+.intro-section {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.intro-section > div.heading {
+    margin-bottom: 1.4em;
+    height: fit-content;
+}
+.intro-section > h2 {
+    height: fit-content;
     font-size: 2.4em;
     font-family: Poppins;
-    font-weight: 600;
+    font-weight: 550;
+    margin-top: auto;
+    margin-bottom: 0.8em;
+}
+.intro-section > div.heading > img {
+    border-radius: 10px;
+    max-height: 50px;
+    max-width: 50px;
+    font-size: 2.5em;
     margin-top: auto;
     margin-bottom: auto;
 }
-.main-section > div > img {
-    height: 50px;
-    width: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
+.intro-section > div.content {
+    height: fit-content;
+    font-size: 1.1em;
+    max-width: 90%;
 }
-.main-section > div {
-    line-height: 1.6em;
-    max-width: 70%;
+.image-section {
+    margin: auto 0 auto auto;
+    display: grid;
+    height: auto;
+    padding: 2.2em 2.4em;
+    background-color: rgb(98, 222, 63);
+    min-width: 100px;
+    width: fit-content;
+}
+.image-section > img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border: 6px solid rgb(31, 31, 31);
+    border-radius: 10px;
+    box-shadow: rgba(30, 30, 30, 0.25) 8px 12px 10px;
+}
+.how-section, .samples-section, .why-section {
+    height: fit-content;
+    margin-top: 3.5em;
+}
+.how-section > h2 {
+    color: rgb(27, 44, 155);
+}
+.why-section > div {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2em;
+}
+.card {
+    border-radius: 15px;
+    padding: 1em 1.4em;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(248, 178, 1);
+    color:  rgb(27, 44, 155);
+}
+.card > h1 {
+    height: fit-content;
+    font-family: 0.95em;
+    font-weight: 550;
+}
+.card > div {
+    height: auto;
+    display: flex;
+    gap: 1em;
+}
+.card > div > .line {
+    content: "";
+    height: auto;
+    width: 5px;
+    background-color: yellow;
+    background-color: rgb(255, 140, 0);
+}
+.card > div > .content {
+    height: auto;
+    max-width: 80%;
 }
 
-.screenshot {
-    height: 50%;
-    width: 50%;
-}
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
     .heading-section > h1 {
-        width: 65%;
-        font-size: 2.1em;
+        width: 80%;
+        font-size: 2.4em;
     }
     .heading-section > div > button {
         height: fit-content;
@@ -114,5 +183,32 @@ header > nav > ul {
         background-color: rgb(27, 44, 155);
         border: 1px solid rgb(27, 44, 155);
         cursor: pointer;
+    }
+    .intro-group {
+        margin-top: 2em;
+        height: fit-content;
+        display: block;
+        gap: 2.5em;
+    }
+    .image-section {
+        margin-top: 1.8em;
+        padding: 2.4em;
+        
+    }
+
+    .intro-section > div.content {
+        max-width: 100%;
+    }
+
+}
+@media screen and (max-width: 640px) {
+    .image-section {
+        padding: 2em;
+    }
+    .intro-section > div.content {
+        max-width: 100%;
+    }
+    header > nav > ul {
+        display: none;
     }
 }

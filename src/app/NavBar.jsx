@@ -1,11 +1,11 @@
 export default function NavBar() {
     return (
         <header>
-            <div>logo</div>
+            <div><b>LamChat</b></div>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
+                    <li><b>Home</b></li>
+                    <li><b>About</b></li>
                 </ul>
             </nav>
         </header>  
