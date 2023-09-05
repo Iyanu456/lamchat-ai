@@ -1,95 +1,68 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+import NavBar from "./NavBar"
+import IntroSection from "./IntroductionSection"
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+    const largeHeading = {
+        height: "fit-content",
+        fontSize: "2.4em",
+        fontfamily: "Poppins",
+        fontWeight: "550"
+    }
+    const firstCard = {
+        backgroundColor: "rgb(258, 248, 10)",
+        color: "rgb(27, 44, 155)"
+    }
+    return (
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <NavBar />
+            <section className="heading-section">
+                <h1>Welcome to <b>LamChat ai</b> Where Conversations come to Life</h1>
+                <div className="flex g-10 mt-40">
+                    <button>Get Started</button>
+                    <button>See More</button>
+                </div>
+            </section>
+            <main className="main-group">
+                <IntroSection />
+                <section className="how-section">
+                    <h2 style={largeHeading} className="mb-5">How Does LamChat Work?</h2>
+                    <div>
+                        LamChat is powered by state-of-the-art AI technology. It understands your questions and provides relevant, accurate information in real-time. Our ever-evolving chatbot adapts to your needs, ensuring each interaction is meaningful and productive.
+                    </div>
+                </section>
+                <section className="samples-section">
+                    <h2 style={largeHeading} className="mb-5">Samples</h2>
+                    <div>
+                        LamChat is powered by state-of-the-art AI technology. It understands your questions and provides relevant, accurate information in real-time. Our ever-evolving chatbot adapts to your needs, ensuring each interaction is meaningful and productive.
+                    </div>
+                </section>
+                <section className="why-section mb-30">
+                    <h2 style={largeHeading} className="mb-5">Why LamChat?</h2>
+                    <div>
+                        <div className="card" >
+                            <h1>Great Conversations</h1>
+                            <div>
+                                <div className="line"></div>
+                                <div className="content">{"LamChat is here for fun and informative chats. It's really good at making conversations interesting"}.</div>
+                            </div>
+                        </div>
+                        <div className="card" >
+                            <h1>Great Conversations</h1>
+                            <div>
+                                <div className="line"></div>
+                                <div className="content">{"LamChat is here for fun and informative chats. It's really good at making conversations interesting."}</div>
+                            </div>
+                        </div>
+                        <div className="card" >
+                            <h1>Great Conversations</h1>
+                            <div>
+                                <div className="line"></div>
+                                <div className="content">{"LamChat is here for fun and informative chats. It's really good at making conversations interesting."}</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    )
 }
