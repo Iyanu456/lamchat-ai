@@ -6,7 +6,7 @@ header {
     
 }
 
-header > div {
+header > img {
     margin: auto auto auto 0;
 }
 
@@ -186,6 +186,10 @@ header > nav > ul > li:hover {
 
 
 @media screen and (max-width: 860px) {
+    header {
+        padding: 1.2em 2em;
+        
+    }
     .heading-section {
         height: fit-content;
         color: white;
