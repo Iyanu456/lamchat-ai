@@ -15,6 +15,9 @@
     line-height: 1.3em;
 
 }
+body {
+    height: fit-content;
+}
 
 
 .main-container {

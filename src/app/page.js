@@ -12,13 +12,13 @@ export default function Home() {
         color: "rgb(27, 44, 155)"
     }
     return (
-        <div>
+        <>
             <NavBar />
             <section className="heading-section">
                 <h1>Welcome to <b>LamChat ai</b> Where Conversations come to Life</h1>
                 <div className="flex g-10 mt-40">
-                    <button>Get Started</button>
-                    <button>See More</button>
+                    <button>Sign up</button>
+                    <button>Login</button>
                 </div>
             </section>
             <main className="main-group">
@@ -63,6 +63,6 @@ export default function Home() {
                 </section>
             </main>
             
-        </div>
+        </>
     )
 }
