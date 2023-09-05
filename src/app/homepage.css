@@ -14,6 +14,17 @@ header > nav > ul {
     margin: auto 0 auto auto;
     display: flex;
     gap: 2em;
+    cursor: pointer;
+}
+header > nav > ul > li {
+    padding: 0.5em 1.2em;
+    border-radius: 5px;
+    background-color:  rgba(5, 9, 40, 0);
+    transition: 100ms;
+}
+header > nav > ul > li:hover {
+    color: white;
+    background-color:  rgb(5, 9, 40);
 }
 
 .heading-section {
@@ -23,7 +34,7 @@ header > nav > ul {
     display: grid;
     place-items: center;
     padding-top: 2.6em;
-    padding-bottom: 2.6em;
+    padding-bottom: 3em;
 }
 
 .gradient {
@@ -38,29 +49,24 @@ header > nav > ul {
     width: 68%;
     text-align: center;
     line-height: 1.2em;
-    font-size: 2.8em;
+    font-size: 3em;
     font-family: Poppins;
-    font-weight: 600;
+    font-weight: 500;
 }
-.heading-section > p {
-    max-width: 70%;
-    text-align: center;
-    color: rgb(214, 214, 214);
-    font-size: 0.92em;
-}
+
 .heading-section > div > button {
     height: fit-content;
     font-size: 1.04em;
     font-weight: 500;
     padding: 0.9em 1.6em;
-    border-radius: 24px;
+    border-radius: 8px;
     color: white;
     background-color: rgb(27, 44, 155);
-    border: 1px solid rgb(27, 44, 155);
+    border: 3.5px solid rgba(27, 44, 155, 0);
     cursor: pointer;
 }
 .heading-section > div > button:hover {
-    border: 1px solid grey;
+    border: 3.5px solid white;
 }
 .heading-section > div > button:last-child {
     background-color: rgba(38, 38, 38, 0.4);
@@ -130,9 +136,6 @@ header > nav > ul {
     margin-top: 3.5em;
 }
 
-.how-section > h2 {
-    color: rgb(27, 44, 155);
-}
 .why-section > div {
     height: fit-content;
     display: grid;
@@ -140,30 +143,36 @@ header > nav > ul {
     gap: 1.2em;
 }
 .card {
+    display: grid;
     border-radius: 15px;
     padding: 1.2em 1.4em 1.4em 1.4em;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(248, 178, 1);
-    color:  rgb(27, 44, 155);
+    width: 350px;
+    min-height: 220px;
+    max-height: 300;
+    background-color: rgb(5, 9, 40);
+    color:  white;
 }
 .card > h1 {
+    font-size: 1.6em;
     height: fit-content;
-    font-family: 0.90em;
+    font-family: Poppins;
     font-weight: 550;
 }
 .card > div {
     height: auto;
     display: flex;
-    gap: 1em;
+    gap: 1.7em;
 }
 .card > div > .line {
     content: "";
     height: auto;
     width: 5px;
-    background-color: rgb(27, 44, 155);
+    background-color: white;
 }
 .card > div > .content {
+    font-size: 1.2em;
+    margin-top: auto;
+    margin-bottom: auto;
     height: auto;
     max-width: 80%;
 }
@@ -172,20 +181,10 @@ header > nav > ul {
 
 @media screen and (max-width: 860px) {
     .heading-section > h1 {
-        width: 88%;
-        font-size: 2.7em;
+        width: 90%;
+        font-size: 2.6em;
     }
-    .heading-section > div > button {
-        height: fit-content;
-        font-size: 1em;
-        font-weight: 500;
-        padding: 0.7em 1.5em;
-        border-radius: 24px;
-        color: white;
-        background-color: rgb(27, 44, 155);
-        border: 1px solid rgb(27, 44, 155);
-        cursor: pointer;
-    }
+    
     .intro-group {
         margin-top: 2em;
         height: fit-content;
