@@ -9,15 +9,15 @@
     border: 0;
     font-family: 'Nunito Sans', sans-serif;
     outline-color: var(--primary-color);
-    height: 100%;
     text-decoration: none;
+    height: 100%;
     list-style: none;
     line-height: 1.3em;
 
 }
-body {
+/*body {
     height: fit-content;
-}
+}*/
 
 
 .main-container {
@@ -26,7 +26,7 @@ body {
     display: grid;
     grid-template-columns: 14em auto;
     width: 100%;
-    height: fit-content;
+    height: 100%;
 }
 
 aside {
@@ -145,7 +145,7 @@ main {
     height: fit-content;
     width: 100%;
     border-radius: 10px;
-    padding: 1.2em 2em;
+    padding: 1.2em 4em 1.2em 2em;
     background-color: rgb(253, 253, 253);
     box-shadow: rgba(49, 49, 49, 0.1)4px 3px 12px;
     border: 1.2px solid rgb(214, 214, 214);
