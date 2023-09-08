@@ -185,6 +185,7 @@ main {
     margin-bottom: auto;
     width: 100%;
     height: fit-content;
+    word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
