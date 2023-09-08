@@ -94,7 +94,7 @@ function App() {
                     {messages.map(m => (
                         <div className={m.role === 'user' ? 'user ' : 'ai '} key={m.id}>
                             <div className={m.role === 'user' ? 'user-icon ' : 'ai-icon '}>
-                                {m.role === 'user' ? 'T' : 'AI'}
+                                {m.role === 'user' ? 'u' : 'ai'}
                             </div>
                             <p>
                                 {m.content}
