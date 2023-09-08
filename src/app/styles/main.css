@@ -207,6 +207,7 @@ main {
     margin-bottom: auto;
     width: 100%;
     height: fit-content;
+    white-space: wrap;
     overflow-wrap: break-word;
 }
 
