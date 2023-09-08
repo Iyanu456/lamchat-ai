@@ -70,8 +70,12 @@ main {
     background-color: rgb(254, 254, 254);
     border-bottom: 1px solid rgb(220, 220, 220);
 }
-.chat-section {
+.chat-section > div{
+    padding-left: 1.8em;
+    padding-right: 1.8em;
     width: 100%;
+    margin-bottom: 5em;
+    overflow-y: scroll;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -140,6 +144,7 @@ main {
 }
 
 .prompt-field > input {
+    font-size: 1.1em;
     margin-top: auto;
     margin-bottom: auto;
     height: fit-content;

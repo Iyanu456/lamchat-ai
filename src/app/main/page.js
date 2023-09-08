@@ -63,12 +63,12 @@ function App() {
     }*/
     
     return (
+        <>
+        <Header />
         <div className="main-container">
             <aside><button>New chat</button></aside>
-            <div style={{overflowY: "scroll", paddingBottom: "6.2em"}}>
-            <Header />
-            <main>
                 <section className="chat-section">
+                    <div>
                     {banner && 
                     <div className="banner">
                         <div style={{display: "flex", marginTop: "1em", margin: "auto", height: "fit-content"}}>
@@ -102,9 +102,9 @@ function App() {
                         
                         </div>
                     ))}
+                    </div>
                 </section>
-            </main>
-            </div>
+
                 <PromptField 
                     onSubmit={handleSubmit}
                     placeholder="Ask me anything"
@@ -117,6 +117,7 @@ function App() {
                 />
            
         </div>
+        </>
     )
 }
 
