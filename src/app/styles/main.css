@@ -24,8 +24,8 @@
     font-family: 'Nunito Sans';
     width: fit-content;
     /*display: grid;
-    grid-template-columns: 14em auto;*/
-    height: 100%;
+    grid-template-columns: 14em auto;
+    height: 100%;*/
 }
 
 aside {
@@ -77,13 +77,21 @@ main {
     background-color: rgb(254, 254, 254);
     border-bottom: 1px solid rgb(220, 220, 220);
 }
+.chat-section {
+    display: grid;
+    max-height: 85%;
+}
 .chat-section > div{
     padding-left: 1.8em;
     padding-right: 1.8em;
     max-width: 80%;
+    max-height: fit-content;
+    margin-top: 3em;
     margin-left: 14em;
-    margin-bottom: 7em;
     overflow-y: scroll;
+}
+.chat-section > div:last-child {
+    padding-bottom: 4em;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -213,6 +221,16 @@ main {
 }
 
 @media screen and (max-width: 800px) {
+    aside {
+        display: none;
+    }
+    .header {
+        left: 0
+    }
+    .chat-section > div {
+        margin-left: 0;
+        margin-right: 0;
+    }
     .example-group {
         padding: 1em 1.2em;
         display: flex;
@@ -222,6 +240,10 @@ main {
     .example-group > div {
         height: fit-content;
     }
+    .prompt-field {
+        padding: 1.4em 1em;
+        left: 0;
+    }
 }
 @media screen and (max-width: 700px) {
     main {
@@ -229,18 +251,11 @@ main {
         margin-right: 1em;
         padding-bottom: 2.4em;
     }
-
-    aside {
-        display: none;
-    }
     .main-container {
         display: grid;
         grid-template-columns: 1fr;
     }
-    .prompt-field {
-        padding: 1.4em 1em;
-        left: 0;
-    }
+    
 }
 
 @media screen and (max-width: 700px) {
