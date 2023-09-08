@@ -65,8 +65,8 @@ function App() {
     return (
         <>
         <Header />
-        <div className="main-container">
-            <aside><button>New chat</button></aside>
+        <aside><button>New chat</button></aside>
+            
                 <section className="chat-section">
                     <div>
                     {banner && 
@@ -115,8 +115,6 @@ function App() {
                         setBanner(false)
                     }}
                 />
-           
-        </div>
         </>
     )
 }
