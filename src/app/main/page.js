@@ -65,7 +65,7 @@ function App() {
     return (
         <div className="main-container">
             <aside><button>New chat</button></aside>
-            <div style={{overflowY: "scroll"}}>
+            <div style={{overflowY: "scroll", paddingBottom: "6.2em"}}>
             <Header />
             <main>
                 <section className="chat-section">
@@ -111,6 +111,7 @@ function App() {
                     value={input} 
                     onChange={handleInputChange}
                     onClick={() => {
+                        console.log(messages)
                         setBanner(false)
                     }}
                 />

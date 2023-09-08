@@ -6,7 +6,7 @@ header {
     
 }
 
-header > div {
+header > img {
     margin: auto auto auto 0;
 }
 
@@ -29,12 +29,13 @@ header > nav > ul > li:hover {
 
 .heading-section {
     height: fit-content;
-    background-color: rgb(5, 9, 40);
+    background-color: rgb(14, 23, 87);
     color: white;
     display: grid;
-    place-items: center;
+    /*place-items: center;*/
     padding-top: 2.6em;
     padding-bottom: 3em;
+    padding-left: 4em;
 }
 
 .gradient {
@@ -45,9 +46,9 @@ header > nav > ul > li:hover {
   }
   
 .heading-section > h1 {
-    margin: auto;
+    /*margin: auto;*/
     width: 68%;
-    text-align: center;
+    /*text-align: center;*/
     line-height: 1.2em;
     font-size: 3em;
     font-family: Poppins;
@@ -57,7 +58,7 @@ header > nav > ul > li:hover {
 .heading-section > div > button {
     height: fit-content;
     font-size: 1.04em;
-    font-weight: 500;
+    font-weight: 550;
     padding: 0.9em 1.6em;
     border-radius: 8px;
     color: white;
@@ -69,11 +70,15 @@ header > nav > ul > li:hover {
     border: 3.5px solid white;
 }
 .heading-section > div > button:last-child {
-    background-color: rgba(38, 38, 38, 0.4);
+    background-color: rgb(236, 236, 236);
+    color: rgb(27, 44, 155);
+}
+.heading-section > div > button:last-child:hover {
+    border: 3.5px solid rgb(27, 44, 155);
 }
 .main-group {
     height: fit-content;
-    padding: 2em;
+    padding: 1em 2em;
     margin-bottom: 2em;
 }
 .intro-group {
@@ -93,14 +98,14 @@ header > nav > ul > li:hover {
     margin-bottom: 1.4em;
     height: fit-content;
 }
-.intro-section > h2 {
+/*.intro-section > h2 {
     height: fit-content;
     font-size: 2.4em;
     font-family: Poppins;
     font-weight: 550;
     margin-top: auto;
     margin-bottom: 0.8em;
-}
+}*/
 .intro-section > div.heading > img {
     border-radius: 10px;
     max-height: 50px;
@@ -110,8 +115,9 @@ header > nav > ul > li:hover {
     margin-bottom: auto;
 }
 .intro-section > div.content {
+    line-height: 1.8em;
     height: fit-content;
-    font-size: 1.1em;
+    font-size: 1.2em;
     max-width: 90%;
 }
 .image-section {
@@ -146,7 +152,7 @@ header > nav > ul > li:hover {
     display: grid;
     border-radius: 15px;
     padding: 1.2em 1.4em 1.4em 1.4em;
-    width: 350px;
+    width: 100%;
     min-height: 220px;
     max-height: 300;
     background-color: rgb(5, 9, 40);
@@ -180,6 +186,20 @@ header > nav > ul > li:hover {
 
 
 @media screen and (max-width: 860px) {
+    header {
+        padding: 1.2em 2em;
+        
+    }
+    .heading-section {
+        height: fit-content;
+        color: white;
+        display: grid;
+        /*place-items: center;*/
+        padding-top: 2.6em;
+        padding-bottom: 3em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
     .heading-section > h1 {
         width: 90%;
         font-size: 2.6em;

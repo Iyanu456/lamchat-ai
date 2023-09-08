@@ -4,10 +4,9 @@ import Screenshot from "./assets/lamchat_screeenshot.jpg"
 
 export default function IntroSection() {
     return (
-        <section className="intro-group mt-20">
-            <div className="intro-section">
-                    <h2>Introducing LamChat </h2>
-                    
+        <section className="intro-group">
+            
+            <div className="intro-section" style={{height: "fit-content"}}>
                 <div className="content">
                     { "LamChat is your intelligent chat companion, designed to engage, inform, and entertain. Whether you're seeking answers, looking for interesting discussions, or just want to chat, LamChat is here to make your conversations enjoyable and informative."}
                 </div>
