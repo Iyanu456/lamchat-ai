@@ -1,8 +1,7 @@
 "use client";
 import { useChat } from 'ai/react';
 import React from "react";
-import { useState, useEffect, useRef } from "react";
-import ReactMarkdown from 'react-markdown';
+import { useState, useRef } from "react";
 
 import '../styles/main.css'
 import PromptField from "../components/PromptField"
@@ -81,11 +80,7 @@ function App() {
 
                             </div>
 
-                            <div className='content'>
-                                
-                                <ReactMarkdown
-                                    source={parse(m.content)}
-                                >{m.content}</ReactMarkdown>
+                            <div className='content' dangerouslySetInnerHTML={{__html: m.content}}>
                                 
                             </div>
                         </div>
