@@ -1,10 +1,7 @@
 "use client";
 import { useChat } from 'ai/react';
 import React from "react";
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from "./CodeBlock"
-import { useState } from "react";
-import hljs from 'highlight.js';
+import { useState  } from "react";
 import '../styles/main.css'
 import PromptField from "../components/PromptField"
 import Header from "../components/Header";
@@ -18,7 +15,7 @@ function App() {
     var [banner, setBanner] = useState(true)
 
 
-    /*function parse(inputString) {
+    function parse(inputString) {
         let isCodeTagOpen = false;
         
         // Use a regular expression with a replace callback function
@@ -41,7 +38,7 @@ function App() {
         }
         
         return withLineBreaks;
-        }*/
+        }
         
       
     
@@ -81,28 +78,7 @@ function App() {
                                 {m.role === 'user' ? 'u' : 'ai'}
 
                             </div>
-                            <div className='content'>
-                            <ReactMarkdown
-                            children={m.content} // Parse and render using react-markdown
-                            components={{
-                                code({ node, inline, className, children, ...props }) {
-                                // Check if it's an inline code block
-                                if (inline) {
-                                    return <code className={className} {...props}>{children}</code>;
-                                }
-
-                                // If not inline, highlight the code
-                                const highlightedCode = hljs.highlightAuto(children[0]).value;
-
-                                return (
-                                    
-                                    <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-                                
-                                );
-                                }
-                            }}
-                            />
-
+                            <div className='content' dangerouslySetInnerHTML={{ __html: parse(m.content) }}>
                             </div>
                         
                         </div>

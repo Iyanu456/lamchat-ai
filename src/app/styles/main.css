@@ -11,11 +11,15 @@
     font-family: 'Jost', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
     outline-color: var(--primary-color);
-    /*text-decoration: none;*/
+    text-decoration: none;
     height: 100%;
     list-style: none;
     line-height: 1.5em;
 
+}
+
+li {
+    height: fit-content;
 }
 body {
     font-family: 'Jost', sans-serif;
@@ -132,7 +136,7 @@ main {
     font-size: 'Jost';
     display: grid;
     place-items: center;
-    font-size: 1.1em;
+    font-size: 1.06em;
     font-weight: 500;
     padding: 0.8em 1.2em;
     height: 100%;
@@ -211,6 +215,7 @@ main {
     font-size: 1.1em;
     margin-top: auto;
     margin-bottom: auto;
+    display: grid;
     width: 100%;
     height: fit-content;
     word-wrap: break-word;
@@ -238,9 +243,39 @@ main {
     background-color: rgb(107, 0, 107);
 }
 
-code {
+div.content > p {
+    height: fit-content;
+}
+div.content > pre {
+    font-size: 1.1em;
+    font-family: monospace;
+    border-radius: 15px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em 0.4em 0.5em 1em;
+    margin-right: 1em;
+    background-color: rgb(15, 15, 15);
     word-wrap: break-word;
+    overflow-x: scroll;
     overflow-wrap: break-word;
+    height: fit-content;
+}
+pre > code {
+    font-family: monospace;
+    color: rgb(209, 209, 209);
+}
+pre > code > span {
+    font-family: monospace;
+}
+.hljs-keyword, .hljs-type, .hljs-title, .hljs-params {
+    font-family: monospace;
+}
+code{
+    font-family: monospace;
+    font-size: 1.05em;
+    height: fit-content;
+    overflow-x: scroll;
+
 }
 
 @media screen and (max-width: 800px) {
