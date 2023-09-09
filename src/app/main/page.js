@@ -2,6 +2,8 @@
 import { useChat } from 'ai/react';
 import React from "react";
 import { useState, useEffect, useRef } from "react";
+import ReactMarkdown from 'react-markdown';
+
 import '../styles/main.css'
 import PromptField from "../components/PromptField"
 import Header from "../components/Header";
