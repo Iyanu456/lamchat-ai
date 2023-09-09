@@ -63,12 +63,12 @@ function App() {
     }*/
     
     return (
-        <div className="main-container">
-            <aside><button>New chat</button></aside>
-            <div style={{overflowY: "scroll"}}>
-            <Header />
-            <main>
+
+        <>
+        <Header />
+        <aside><button>New chat</button></aside>
                 <section className="chat-section">
+                    <div>
                     {banner && 
                     <div className="banner">
                         <div className="main-chat-section"style={{display: "flex", marginTop: "1em", margin: "auto", height: "fit-content"}}>
@@ -94,8 +94,9 @@ function App() {
                     {messages.map(m => (
                         <div className={m.role === 'user' ? 'user ' : 'ai '} key={m.id}>
                             <div className={m.role === 'user' ? 'user-icon ' : 'ai-icon '}>
-                                {m.role === 'user' ? 'T' : 'AI'}
-                                {chatContainerRef.current?.scrollIntoView({ behavior: 'smooth' })}
+
+                                {m.role === 'user' ? 'u' : 'ai'}
+
                             </div>
                             <p>
                                 {m.content}
@@ -103,9 +104,9 @@ function App() {
                         
                         </div>
                     ))}
+                    </div>
                 </section>
-            </main>
-            </div>
+
                 <PromptField 
                     onSubmit={handleSubmit}
                     placeholder="Ask me anything"
@@ -116,8 +117,7 @@ function App() {
                         setBanner(false)
                     }}
                 />
-           
-        </div>
+        </>
     )
 }
 
