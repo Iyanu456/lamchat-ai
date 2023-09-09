@@ -21,6 +21,7 @@ function App() {
     var [value, setValue] = useState("")
     var [banner, setBanner] = useState(true)
 
+
     function parse(inputString) {
         let isCodeTagOpen = false;
 
@@ -42,7 +43,6 @@ function App() {
 
     return outputString;
       }
-      
       
     return (
 
@@ -80,15 +80,14 @@ function App() {
                                 {m.role === 'user' ? 'u' : 'ai'}
 
                             </div>
+
                             <div className='content'>
                                 
                                 <ReactMarkdown
-                                    source={parse(m.content)} // Parse and render using react-markdown
-                                    renderers={{ code: CodeBlock }} // Specify a custom rendering function for code blocks
+                                    source={parse(m.content)}
                                 >{m.content}</ReactMarkdown>
                                 
                             </div>
-                        
                         </div>
                     ))}
                     </div>
