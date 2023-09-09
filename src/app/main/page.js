@@ -95,7 +95,7 @@ function App() {
 
                                 return (
                                     
-                                    <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
+                                    <code dangerouslySetInnerHTML={{ __html: highlightedCode }}></code>
                                 
                                 );
                                 }
