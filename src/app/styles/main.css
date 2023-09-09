@@ -13,7 +13,7 @@
     font-family: 'Jost', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
     outline-color: var(--primary-color);
-    text-decoration: none;
+    /*text-decoration: none;*/
     height: 100%;
     list-style: none;
     line-height: 1.3em;
@@ -169,7 +169,7 @@ main {
 
 .prompt-field > input {
     font-family: 'Jost';
-    font-size: 1em;
+    font-size: 1.06em;
     margin-top: auto;
     margin-bottom: auto;
     height: fit-content;
@@ -208,9 +208,9 @@ main {
     
 }
 
-.user > p, .ai > p {
+.user > div.content, .ai > div.content {
     font-family: 'Jost';
-    font-size: 1em;
+    font-size: 1.06em;
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
