@@ -2,7 +2,6 @@
 import { useChat } from 'ai/react';
 import React from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from "./CodeBlock"
 import { useState } from "react";
 import hljs from 'highlight.js';
 import '../styles/main.css'
