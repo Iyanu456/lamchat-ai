@@ -82,7 +82,7 @@ function App() {
                             </div>
                             <div className='content'>
                             <ReactMarkdown
-                            children={m.content} // Parse and render using react-markdown
+                             // Parse and render using react-markdown
                             components={{
                                 code({ node, inline, className, children, ...props }) {
                                 // Check if it's an inline code block
@@ -100,7 +100,7 @@ function App() {
                                 );
                                 }
                             }}
-                            />
+                            >{m.content}</ReactMarkdown>
 
                             </div>
                         
