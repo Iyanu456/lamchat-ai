@@ -1,7 +1,7 @@
 "use client";
 import { useChat } from 'ai/react';
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import '../styles/main.css'
 import PromptField from "../components/PromptField"
 import Header from "../components/Header";
@@ -12,8 +12,8 @@ import lamLogo from "../assets/icons/lamlogo.png"
 
 
 function App() {
-
     const { messages, input, handleInputChange, handleSubmit } = useChat();
+    const chatContainerRef = useRef(null);
     var obj;
     //var [count, setCount] = useState(0)
     var [items, setItems] = useState([])
@@ -65,13 +65,13 @@ function App() {
     return (
         <div className="main-container">
             <aside><button>New chat</button></aside>
-            <div style={{overflowY: "scroll", paddingBottom: "6.2em"}}>
+            <div style={{overflowY: "scroll"}}>
             <Header />
             <main>
                 <section className="chat-section">
                     {banner && 
                     <div className="banner">
-                        <div style={{display: "flex", marginTop: "1em", margin: "auto", height: "fit-content"}}>
+                        <div className="main-chat-section"style={{display: "flex", marginTop: "1em", margin: "auto", height: "fit-content"}}>
 
                             <h1 style={{ 
                                 margin: "auto"}}><b>LamChat</b></h1>
@@ -95,6 +95,7 @@ function App() {
                         <div className={m.role === 'user' ? 'user ' : 'ai '} key={m.id}>
                             <div className={m.role === 'user' ? 'user-icon ' : 'ai-icon '}>
                                 {m.role === 'user' ? 'T' : 'AI'}
+                                {chatContainerRef.current?.scrollIntoView({ behavior: 'smooth' })}
                             </div>
                             <p>
                                 {m.content}

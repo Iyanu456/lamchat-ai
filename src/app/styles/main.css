@@ -71,6 +71,9 @@ main {
     border-bottom: 1px solid rgb(220, 220, 220);
 }
 .chat-section {
+    display: grid;
+    height: 100%;
+    margin-bottom: 6em;
     width: 100%;
 }
 /* width */
