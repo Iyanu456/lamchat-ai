@@ -1,11 +1,13 @@
 "use client";
 import { useChat } from 'ai/react';
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import ReactMarkdown from 'react-markdown';
+import 'highlight.js/styles/default.css';
 import '../styles/main.css'
 import PromptField from "../components/PromptField"
 import Header from "../components/Header";
-import runReplicate from "../run_replicate";
+import CodeBlock from './CodeBlock';
 import Image from 'next/image';
 import lamLogo from "../assets/icons/lamlogo.png"
 
@@ -22,25 +24,26 @@ function App() {
 
     function parse(inputString) {
         let isCodeTagOpen = false;
-      
+
         // Use a regular expression with a replace callback function
         const outputString = inputString.replace(/```/g, function (match) {
-          if (isCodeTagOpen) {
-            isCodeTagOpen = false;
-            return '</code></pre><br>';
-          } else {
-            isCodeTagOpen = true;
-            return '<br><pre><code>';
-          }
+            if (isCodeTagOpen) {
+                isCodeTagOpen = false;
+                return '</code></pre>';
+            } else {
+                isCodeTagOpen = true;
+                return '<pre><code>';
+            }
         });
-      
+
         // Close any open code tag if needed
         if (isCodeTagOpen) {
-          return outputString + '</code>';
-        }
-      
-        return outputString;
+        return outputString + '</code></pre>';
+    }
+
+    return outputString;
       }
+      
       
     return (
 
@@ -78,8 +81,13 @@ function App() {
                                 {m.role === 'user' ? 'u' : 'ai'}
 
                             </div>
-                            <div className='content' dangerouslySetInnerHTML={{ __html: parse(m.content) }}>
-                                {/*parse(m.content)*/}
+                            <div className='content'>
+                                
+                                <ReactMarkdown
+                                    source={parse(m.content)} // Parse and render using react-markdown
+                                    renderers={{ code: CodeBlock }} // Specify a custom rendering function for code blocks
+                                >{m.content}</ReactMarkdown>
+                                
                             </div>
                         
                         </div>
