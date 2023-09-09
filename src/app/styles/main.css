@@ -240,6 +240,11 @@ main {
     background-color: rgb(107, 0, 107);
 }
 
+code {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 @media screen and (max-width: 800px) {
     aside {
         display: none;
