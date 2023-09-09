@@ -1,11 +1,10 @@
 "use client";
 import { useChat } from 'ai/react';
 import React from "react";
-import { useState, useRef } from "react";
+import { useState  } from "react";
 import '../styles/main.css'
 import PromptField from "../components/PromptField"
 import Header from "../components/Header";
-import runReplicate from "../run_replicate";
 import Image from 'next/image';
 import lamLogo from "../assets/icons/lamlogo.png"
 
@@ -13,54 +12,35 @@ import lamLogo from "../assets/icons/lamlogo.png"
 
 function App() {
     const { messages, input, handleInputChange, handleSubmit } = useChat();
-    const chatContainerRef = useRef(null);
-    var obj;
-    //var [count, setCount] = useState(0)
-    var [items, setItems] = useState([])
-    var [value, setValue] = useState("")
     var [banner, setBanner] = useState(true)
 
-    /*function update(prompt) {
-        obj = {
-            id: count,
-            user: 'user',
-            message: prompt
-        }
-        //setItems(oldItems => [...oldItems, obj])
-        setBanner(false)
 
-    }*/
-
-    /*function handleClick(event) {
-        event.preventDefault()
-        if (value === "") { return }
-        setCount(count + 1)
-        setValue(event.target.value)
-        obj = {
-            id: count,
-            user: 'user',
-            message: value
-        }
-        setItems(oldItems => [...oldItems, obj])
-        setBanner(false)
-        setValue('')
-
-        runReplicate(prompt)
-        .then(outputText => {
-            setCount(count + 1)
-            setValue(event.target.value)
-            obj = {
-                id: count,
-                user: 'ai',
-                message: outputText
+    function parse(inputString) {
+        let isCodeTagOpen = false;
+        
+        // Use a regular expression with a replace callback function
+        const outputString = inputString.replace(/```/g, function (match) {
+            if (isCodeTagOpen) {
+            isCodeTagOpen = false;
+            return '</code></pre>';
+            } else {
+            isCodeTagOpen = true;
+            return '<pre><code>';
             }
-        setItems(oldItems => [...oldItems, obj])
-        })
-        .catch(error => {
-            console.error(error);
         });
-        event.preventDefault()
-    }*/
+        
+        // Replace newline characters with <br> tags
+        const withLineBreaks = outputString.replace(/\n/g, '<br>');
+        
+        // Close any open code tag if needed
+        if (isCodeTagOpen) {
+            return withLineBreaks + '</code></pre>';
+        }
+        
+        return withLineBreaks;
+        }
+        
+      
     
     return (
 
@@ -98,9 +78,8 @@ function App() {
                                 {m.role === 'user' ? 'u' : 'ai'}
 
                             </div>
-                            <p>
-                                {m.content}
-                            </p>
+                            <div className='content' dangerouslySetInnerHTML={{ __html: parse(m.content) }}>
+                            </div>
                         
                         </div>
                     ))}
