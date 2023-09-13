@@ -120,6 +120,8 @@ main {
 .banner {
     height: fit-content;
     display: grid;
+    padding-left: 5em;
+    padding-right: 5em;
     gap: 1em;
 }
 
@@ -127,8 +129,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
+    
     place-items: center;
 }
 
@@ -159,7 +160,7 @@ main {
     position: fixed;
     height: fit-content;
     bottom: 0;
-    padding: 1.4em 2.4em;
+    padding: 1.4em 5em;
     width: auto;
     right: 0;
     left: 15em;
@@ -204,8 +205,8 @@ main {
     gap: 1em;
     padding-top: 1.4em;
     padding-bottom: 1.4em;
-    padding-left: 1.8em;
-    padding-right: 1.8em;
+    padding-left: 5.5em;
+    padding-right: 5.5em;
     height: fit-content;
     
 }
@@ -272,7 +273,7 @@ pre > code > span {
 }
 code{
     font-family: monospace;
-    font-size: 1.05em;
+    font-size: 1em;
     height: fit-content;
     overflow-x: scroll;
 
@@ -284,6 +285,10 @@ code{
     }
     .header {
         left: 0
+    }
+    .banner {
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .chat-section > div {
         margin-left: 0;
