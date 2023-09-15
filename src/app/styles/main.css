@@ -120,6 +120,8 @@ main {
 .banner {
     height: fit-content;
     display: grid;
+    padding-left: 5em;
+    padding-right: 5em;
     gap: 1em;
 }
 
@@ -127,8 +129,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
+    
     place-items: center;
 }
 
@@ -159,7 +160,7 @@ main {
     position: fixed;
     height: fit-content;
     bottom: 0;
-    padding: 1.4em 2.4em;
+    padding: 1.4em 5em;
     width: auto;
     right: 0;
     left: 15em;
@@ -204,8 +205,8 @@ main {
     gap: 1em;
     padding-top: 1.4em;
     padding-bottom: 1.4em;
-    padding-left: 1.8em;
-    padding-right: 1.8em;
+    padding-left: 5.5em;
+    padding-right: 5.5em;
     height: fit-content;
     
 }
@@ -245,16 +246,18 @@ main {
 
 div.content > p {
     height: fit-content;
+    font-family: 'Jost';
 }
+
 div.content > pre {
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: monospace;
     border-radius: 15px;
     margin-top: 1em;
     margin-bottom: 1em;
-    padding: 1em 0.4em 0.5em 1em;
-    margin-right: 1em;
-    background-color: rgb(15, 15, 15);
+    padding: 1em 0 0.5em 1em;
+    margin-right: 0.2em;
+    background-color: rgba(201, 196, 196, 0);
     word-wrap: break-word;
     overflow-x: scroll;
     overflow-wrap: break-word;
@@ -262,8 +265,9 @@ div.content > pre {
 }
 pre > code {
     font-family: monospace;
-    color: rgb(209, 209, 209);
+    /*color: rgb(209, 209, 209);*/
 }
+
 pre > code > span {
     font-family: monospace;
 }
@@ -272,18 +276,25 @@ pre > code > span {
 }
 code{
     font-family: monospace;
-    font-size: 1.05em;
+    font-size: 1em;
     height: fit-content;
     overflow-x: scroll;
 
 }
-
+.code-curve {
+    border-radius: 15px;
+}
 @media screen and (max-width: 800px) {
+  
     aside {
         display: none;
     }
     .header {
         left: 0
+    }
+    .banner {
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .chat-section > div {
         margin-left: 0;
@@ -304,6 +315,10 @@ code{
     }
 }
 @media screen and (max-width: 700px) {
+    .user, .ai {
+        padding-left: 1em;
+        padding-right: 0.5em;
+    }
     main {
         margin-left: 1em;
         margin-right: 1em;
