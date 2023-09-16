@@ -1,17 +1,16 @@
-"use client";
-import { useChat } from "ai/react";
-import React from "react";
-import { useState } from "react";
-import "../styles/main.css";
+"use client"
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import lamLogo from "../assets/icons/lamlogo.png";
 import Chat from "./Chat";
 import PromptField from "../components/PromptField";
+import { useChat } from "ai/react"; // Update the import path
 
 function App() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat();
-	var [banner, setBanner] = useState(true);
+	const [banner, setBanner] = useState(true);
+	
 
 	return (
 		<>
@@ -60,6 +59,7 @@ function App() {
 					)}
 					<Chat chatData={messages} />
 				</div>
+				
 			</section>
 			<PromptField
 				value={input}
@@ -67,7 +67,9 @@ function App() {
 				onChange={handleInputChange}
 				onSubmit={(e) => {
 					e.preventDefault();
-					banner === true ? setBanner(false) : null;
+					if (banner === true) {
+						setBanner(false);
+					}
 					handleSubmit(e);
 				}}
 			/>
