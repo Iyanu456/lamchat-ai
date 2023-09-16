@@ -37,9 +37,8 @@ export default function Chat({ chatData }) {
                       <SyntaxHighlighter
                         style={materialDark}
 												className="code-curve"
-                        children={String(children).replace(/\n$/, "")}
                         {...props}
-                      />
+                      >{String(children).replace(/\n$/, "")}</SyntaxHighlighter>
                     );
                   },
                 }}

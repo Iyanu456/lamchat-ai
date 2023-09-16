@@ -255,9 +255,9 @@ div.content > pre {
     border-radius: 15px;
     margin-top: 1em;
     margin-bottom: 1em;
-    padding: 1em 0 0.5em 1em;
+    padding: 1em 0.3em 0.3em 0.3em;
     margin-right: 0.2em;
-    background-color: rgba(201, 196, 196, 0);
+    background-color: rgb(61, 61, 61);
     word-wrap: break-word;
     overflow-x: scroll;
     overflow-wrap: break-word;
