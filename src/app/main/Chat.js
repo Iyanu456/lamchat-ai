@@ -1,51 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReactMarkdown from "react-markdown";
-import hljs from "highlight.js";
-//import 'highlight.js/styles/github.css';
+import { Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-// Custom memoization cache for highlighted code
-const codeCache = {};
+// Import Prism.js styles for syntax highlighting (optional)
+//import "prismjs/themes/prism.css";
 
-export default function Chat({ className, profileClass, profileContent, id, content }) {
-  const [highlightedCode, setHighlightedCode] = useState(null);
+//const MemoizedSyntaxHighlighter = React.memo(SyntaxHighlighter);
 
-  useEffect(() => {
-    // Check if the code block content has already been memoized
-    if (!codeCache[content]) {
-      // Highlight the code and store it in the memoization cache
-      const highlighted = hljs.highlightAuto(content).value;
-      codeCache[content] = highlighted;
-    }
-
-    // Set the highlighted code from the memoization cache
-    setHighlightedCode(codeCache[content]);
-  }, [content]);
-
+export default function Chat({ chatData }) {
   return (
-    <div className={className} key={id}>
-      <div className={profileClass}>{profileContent}</div>
-      <div className="content">
-        <ReactMarkdown components={{
-          code({ node, inline, className, children, ...props }) {
-            if (inline) {
-              return <code className={className} {...props}>{children}</code>;
+    <>
+      {chatData.map((message) => (
+        <div
+          className={message.role === "user" ? "user " : "ai "}
+          key={message.id}
+        >
+          <div
+            className={
+              message.role === "user" ? "user-icon " : "ai-icon "
             }
-            // Render the stored highlighted code
-            return (
-              <pre>
-                <code
-                  className={className}
-                  dangerouslySetInnerHTML={{
-                    __html: highlightedCode,
-                  }}
-                />
-              </pre>
-            );
-          },
-        }}>
-          {content}
-        </ReactMarkdown>
-      </div>
-    </div>
+          >
+            {message.role === "user" ? "u" : "ai"}
+          </div>
+          {message.role === "user" ? (
+            <div className="content">{message.content}</div>
+          ) : (
+            <div className="content">
+              <ReactMarkdown
+                components={{
+                  code({ node, inline, children, ...props }) {
+                    if (inline) {
+                      return <code {...props}>{children}</code>;
+                    }
+                    return (
+                      <SyntaxHighlighter
+                        style={materialDark}
+												className="code-curve"
+                        children={String(children).replace(/\n$/, "")}
+                        {...props}
+                      />
+                    );
+                  },
+                }}
+              >
+                {message.content}
+              </ReactMarkdown>
+            </div>
+          )}
+        </div>
+      ))}
+    </>
   );
 }

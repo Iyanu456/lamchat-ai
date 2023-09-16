@@ -1,9 +1,9 @@
-//import debounce from 'lodash.debounce';
+import React from 'react';
 import Image from 'next/image';
-import sendIcon from '../assets/icons/send-2.svg'
+import sendIcon from '../assets/icons/send-2.svg';
 
 function PromptField(props) {
-  
+  // Rest of your component code
 
   return (
     <form className="prompt-field" onSubmit={props.onSubmit}>
@@ -19,4 +19,4 @@ function PromptField(props) {
   );
 }
 
-export default PromptField;
+export default React.memo(PromptField);

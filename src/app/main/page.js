@@ -8,7 +8,7 @@ import Image from "next/image";
 import lamLogo from "../assets/icons/lamlogo.png";
 import Chat from "./Chat";
 import PromptField from "../components/PromptField";
-import sendIcon from "../assets/icons/send-2.svg";
+//import sendIcon from "../assets/icons/send-2.svg";
 
 function App() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat();
@@ -59,25 +59,7 @@ function App() {
 							</div>
 						</div>
 					)}
-					{messages.map((item) => {
-						return (
-							<Chat
-								className={
-									item.role === "user" ? "user " : "ai "
-								}
-								profileClass={
-									item.role === "user"
-										? "user-icon "
-										: "ai-icon "
-								}
-								profileContent={
-									item.role === "user" ? "u" : "ai"
-								}
-								key={item.id}
-								content={item.content}
-							/>
-						);
-					})}
+					<Chat chatData={messages} />
 				</div>
 			</section>
 			<PromptField
@@ -86,7 +68,7 @@ function App() {
 				onChange={handleInputChange}
 				onSubmit={(e) => {
 					e.preventDefault();
-					banner === true ? setBanner(false) : null
+					banner === true ? setBanner(false) : null;
 					handleSubmit(e);
 				}}
 			/>
