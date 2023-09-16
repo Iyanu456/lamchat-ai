@@ -18,7 +18,7 @@ export default function Chat({ chatData }) {
         <div
           className={message.role === "user" ? "user " : "ai "}
           key={message.id}
-          ref={index === chatData.length - 1 ? bottomRef : null}
+          ref={(index === chatData.length - 1) && (message.role != "user") ? bottomRef : null}
         >
           <div className={message.role === "user" ? "user-icon " : "ai-icon "}>
             {message.role === "user" ? "u" : "ai"}
