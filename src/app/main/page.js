@@ -8,7 +8,6 @@ import Image from "next/image";
 import lamLogo from "../assets/icons/lamlogo.png";
 import Chat from "./Chat";
 import PromptField from "../components/PromptField";
-//import sendIcon from "../assets/icons/send-2.svg";
 
 function App() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat();
