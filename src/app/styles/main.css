@@ -255,15 +255,16 @@ div.content > pre {
     border-radius: 15px;
     margin-top: 1em;
     margin-bottom: 1em;
-    padding: 1em 0.3em 0.3em 0.3em;
+    padding: 1em 0.2em 0.3em 0.2em;
     margin-right: 0.2em;
-    background-color: rgb(61, 61, 61);
+    background-color: rgba(61, 61, 61, 0);
     word-wrap: break-word;
     overflow-x: scroll;
     overflow-wrap: break-word;
     height: fit-content;
 }
 pre > code {
+    font-size: 1em;
     font-family: monospace;
     /*color: rgb(209, 209, 209);*/
 }
