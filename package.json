@@ -16,9 +16,11 @@
     "highlight.js": "^11.8.0",
     "lodash.debounce": "^4.0.8",
     "next": "13.4.19",
+    "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.7",
+    "react-syntax-highlighter": "^15.5.0",
     "replicate": "^0.16.1"
   },
   "devDependencies": {

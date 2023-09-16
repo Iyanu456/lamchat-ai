@@ -84,9 +84,9 @@ function App() {
 				value={input}
 				placeholder="Ask me anything"
 				onChange={handleInputChange}
-				onClick={banner === true ? setBanner(false) : null}
 				onSubmit={(e) => {
 					e.preventDefault();
+					banner === true ? setBanner(false) : null
 					handleSubmit(e);
 				}}
 			/>

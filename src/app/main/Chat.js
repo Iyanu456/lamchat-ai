@@ -1,35 +1,50 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import hljs from "highlight.js";
-import he from "he"; // Import the HTML entity decoding library
+//import 'highlight.js/styles/github.css';
+
+// Custom memoization cache for highlighted code
+const codeCache = {};
 
 export default function Chat({ className, profileClass, profileContent, id, content }) {
-  const [highlightedContent, setHighlightedContent] = useState("");
+  const [highlightedCode, setHighlightedCode] = useState(null);
 
   useEffect(() => {
-    // Function to highlight code blocks
-    const highlightCode = (code) => {
-      const decodedCode = he.decode(code); // Decode HTML entities
-      const highlightedCode = hljs.highlightAuto(decodedCode).value;
-      return highlightedCode;
-    };
+    // Check if the code block content has already been memoized
+    if (!codeCache[content]) {
+      // Highlight the code and store it in the memoization cache
+      const highlighted = hljs.highlightAuto(content).value;
+      codeCache[content] = highlighted;
+    }
 
-    // Regular expression to match code blocks enclosed in triple backticks
-    const codeBlockRegex = /```([\s\S]*?)```/g;
-
-    // Process and highlight code blocks
-    const highlightedContent = content.replace(codeBlockRegex, (match, code) => {
-      return "```" + highlightCode(code) + "```";
-    });
-
-    setHighlightedContent(highlightedContent);
+    // Set the highlighted code from the memoization cache
+    setHighlightedCode(codeCache[content]);
   }, [content]);
 
   return (
     <div className={className} key={id}>
       <div className={profileClass}>{profileContent}</div>
       <div className="content">
-        <ReactMarkdown>{highlightedContent}</ReactMarkdown>
+        <ReactMarkdown components={{
+          code({ node, inline, className, children, ...props }) {
+            if (inline) {
+              return <code className={className} {...props}>{children}</code>;
+            }
+            // Render the stored highlighted code
+            return (
+              <pre>
+                <code
+                  className={className}
+                  dangerouslySetInnerHTML={{
+                    __html: highlightedCode,
+                  }}
+                />
+              </pre>
+            );
+          },
+        }}>
+          {content}
+        </ReactMarkdown>
       </div>
     </div>
   );
